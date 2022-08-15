@@ -1,0 +1,4 @@
+u = float(input('nhap so tien can quy doi: ')
+n = 23.405 #ti gia quy doi 1 usd = 23.405vnd
+v = n * u
+printf(u + " usd = " + v + "vnd")
