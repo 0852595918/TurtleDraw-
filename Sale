@@ -10,3 +10,5 @@ elif n >= 150:
   print('tong so tien phai thanh toan la: ', n-25)
 else:
   print('ban khong duoc giam gia')
+  print('tong so tien phai thanh toan la: ', n)
+  
