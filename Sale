@@ -1,0 +1,12 @@
+n = float(input('nhap tong so tien chi tieu'))
+if n >= 75:
+  print('ban duoc giam gia 15$')
+  print('tong so tien phai thanh toan la: ', n-15)
+elif n >= 100:
+  print('ban duoc giam gia 20$')
+  print('tong so tien phai thanh toan la: ', n-25) 
+elif n >= 150:
+  print('ban duoc giam gia 25$')
+  print('tong so tien phai thanh toan la: ', n-25)
+else:
+  print('ban khong duoc giam gia')
