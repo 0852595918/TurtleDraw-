@@ -1,0 +1,19 @@
+height = float(input('nhap chieu cao cua ban(m): '))
+weight = float(input('nhap can nang cua ban(kg): '))
+BMI = weight / (height**2)
+if BMI < 16:
+  print('gay cap do III')
+elif BMI >= 16 and BMI < 17:
+  print('gay cap do II')
+elif BMI >= 17 and BMI <18.5:
+  print('gay cap do I')
+elif BMI >= 18.5 and BMI < 25:
+  print('binh thuong')
+elif BMI >= 25 and BMI < 30:
+  print('thua can')
+elif BMI >= 30 and BMI < 35:  
+  print('beo phi cap do I')
+elif BMI >= 35 and BMI < 40:
+  print('beo phi cap do II')
+else:
+  print('beo phi cap do III')
