@@ -1,0 +1,10 @@
+n = input('nhap 1 so bat ki: ')
+m = float(n)
+if a % 2 == 0:
+  print('so chan')0
+elif a % == 1:  
+  print("so le')
+else:
+  print(' n khong phai so nguyen')
+  return n
+  
