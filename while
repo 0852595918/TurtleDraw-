@@ -1,1 +1,10 @@
-
+import turtle as t
+screen = t.Screen()
+screen.setup(800,800)
+pen = t.Turtle()
+pen.hideturtle()
+d = 0
+while t.distance(pen) < 400:
+    pen.fd(d)
+    pen.right(5)
+    d += 0.05   
