@@ -1,0 +1,12 @@
+num = input('nhap vao 2 so nguyen a b bat ki(a<b): ')
+a = num.split()
+for i in range(int(num.split()[0]),int(num.split()[1])+1): #so nguyen trong doan (a,b) se chay tu a+1 den b-1
+    if i % 3 == 0 and i % 5 == 0: 
+        print('Fizz Buzz ')
+        # continue    
+    elif i % 3 == 0:
+        print('Fizz ')
+    elif i % 5 == 0:
+        print('Buzz ')
+    else:
+        print(i)  
