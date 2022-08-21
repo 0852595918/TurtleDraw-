@@ -1,0 +1,10 @@
+import turtle
+t = turtle.Turtle()
+t.hideturtle()
+t.pencolor('red')
+def square(n,w):
+    for _ in range(n):
+        t.fd(w)
+        t.right(360/n)
+    turtle.done()
+square(12,100)
