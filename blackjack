@@ -16,7 +16,7 @@ while current_number < 21:
         print('so diem hien tai: ',current_number)
         if current_number >= 21:
             print('U LOSE')
-            break
+            # break
         else:
             current_player = 'computer'
     if current_player =='computer':
@@ -26,9 +26,44 @@ while current_number < 21:
         print('so diem hien tai: ',current_number)
         if current_number >= 21:
             print('U WIN')
-            break
+            # break
         else:
             current_player = 'human'
+    if current_number >= 21:
+        play_again = input('ban co muon choi lai hay khong[Y/N]: ') 
+        if play_again == 'Y':
+            current_number = 0
+            player = random.randint(0,1)
+            if player == 0:
+                current_player = 'human'
+            else:
+                current_player = 'computer'
+            continue
+        else:
+            break           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
