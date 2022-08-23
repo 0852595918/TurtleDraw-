@@ -1,0 +1,7 @@
+def count(str):
+    c = 0
+    for _ in str:
+        c += 1
+    return c    
+str = input('nhap mot chuoi bat ki: ')
+print('so ki tu cua chuoi vua nhap la: ',count(str))
