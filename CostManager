@@ -1,0 +1,32 @@
+expenses =[]
+def add(list,new):
+    list.append(new)
+def find_index_new(list, name):
+    result = -1
+    length = len(list)
+    for i in range(length):
+        if list[i]['name'] ==   name:
+            result = i
+    return result
+def remove(list,name):
+    if find_index_new(list,name) > -1 :
+        del list[find_index_new(list,name)]
+    else:
+        print(name + 'can not found')    
+print('your expenses', expenses)
+print("What do you want to do? -\n"\
+        "1. Add\n" \
+        "2. Remove")
+option = int(input('select your option: '))
+name_input = input('user name: ')
+if option == 1 : 
+    cost_input = int(input('enter Cost: '))
+    date_input = input('enter Date (yyyy/mm/dd): ')
+    new = {'name' : name_input,'cost':cost_input,'date':date_input}
+    add(expenses,new)
+    print('expenses updated: ',expenses)
+elif option ==2 :
+    remove(expenses,name_input)
+    print('expenses updated: ',expenses)
+else:
+    print('your option does not exist')
