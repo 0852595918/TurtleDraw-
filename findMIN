@@ -1,0 +1,9 @@
+def findmin(a):
+    a = a.split()
+    min = a[0]
+    for i in a:
+        if (i) < min:
+            min = i
+    return min
+mystr = input('nhap mang so nguyen cua ban: ')
+print(findmin(mystr))
