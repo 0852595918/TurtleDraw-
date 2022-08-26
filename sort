@@ -1,0 +1,20 @@
+def sort(a,b,c):
+    temp = 0 
+    if b<a and b<c :
+        temp = a 
+        a = b
+        b = temp
+    elif c<a and c<b:
+        temp = a
+        a = c
+        c = temp
+    if c<b:
+        temp = b
+        b = c
+        c = temp
+    return a,b,c
+print('nhap 3 so nguyen bat ki: ')   
+x = int(input('so thu nhat: '))
+y = int(input('so thu hai: '))
+z = int(input('so thu ba: '))
+print(sort(x,y,z))
