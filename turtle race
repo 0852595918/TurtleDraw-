@@ -1,0 +1,31 @@
+import turtle as t
+from random import randint
+timmy = t.Turtle()
+my_screen = t.Screen()
+my_screen.setup(width=500,height=500)
+
+def is_race_on():
+    n = len(all_turtules)
+    for i in range(n):
+        if all_turtules[i].xcor() > 250:
+            if(answer==colours[i]):
+                print("You win!")
+            else:
+                print("You lose!")
+            return False
+    return True
+timmy.shapesize(2)
+colours = ["red","yellow","green","blue","pink","orange","black"]
+all_turtules = []
+for turtle_index in range(0,7):
+    new_turtle = t.Turtle(shape="turtle")
+    new_turtle.penup()
+    new_turtle.color(colours[turtle_index])
+    new_turtle.goto(-220, -100 + 30 * turtle_index)
+    all_turtules.append(new_turtle)
+answer = my_screen.textinput(title = "Make your bet",prompt="Which one u choose?")
+while is_race_on():
+    n = len(all_turtules)
+    for i in range(n):
+        all_turtules[i].forward(randint(1,10))
+my_screen.exitonclick()
