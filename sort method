@@ -1,0 +1,17 @@
+str1 = ["Mobile", "Laptop", 100, "Camera", 310.28, "Speakers", 27.00,"Television", 1000, "Laptop Case", "Camera Lens"]
+text = []
+number = []
+for val in str1:
+    if isinstance(val,str):
+        text.append(val)
+    else:
+        number.append(val)
+text.sort()
+print(text)
+text.sort(reverse=True)
+print(text)
+number.sort()
+print(number)
+number.sort(reverse =True)
+print(number)
+print('2 so lon nhat trong list number la:',number[0:2])
