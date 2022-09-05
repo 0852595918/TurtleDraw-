@@ -1,0 +1,9 @@
+def countword(message):
+    main = message.lower().strip().split()
+    count = 0
+    numword = dict.fromkeys(main,count) 
+    for i in main:  
+        numword[i] += 1
+    print(numword)
+message = input('nhap mot van ban bat ki: ')
+countword(message)
