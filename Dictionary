@@ -1,0 +1,15 @@
+Dictionary =  {'book':'quyen sach',
+                'pen':'cai but',
+                'pencil':'but chi',
+                'smartphone':'dien thoai thong minh',
+                'computer':'may tinh',
+                'hat':'non',
+                'car':'xe hoi',
+                'food':'thuc an'}
+def stran(keyword):
+    if keyword in Dictionary:
+        print(keyword,':',Dictionary[keyword])
+    else:
+        print('your word does not contain in Dictionary or not exist')
+word_input = input('enter the word you want to stranlate: ')
+stran(word_input) 
