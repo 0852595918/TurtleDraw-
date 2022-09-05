@@ -1,0 +1,40 @@
+list_product = {1000:{'name':'LCD Screen','cost':'5.500.000','waranty':'2 years'},
+                1001:{'name':'keyboard RBG Fuhlen','cost':'990.000','waranty':'6 months'},
+                1002:{'name':'MSI Mouse','cost':'590.000','waranty':'1 year'},
+                1003:{'name':'Headphone Dareu','cost':'960.000','waranty':'1 year'}}
+def search(id,list):
+    if id in list:
+        return list[id]
+def update(id,list,newname):
+    list[id]['name'] = newname
+while True:
+    print('choose your request: \n1:add new product\n2:update product\n3:delete product\n4:exit')
+    option = int(input('enter a number corresponding to your selection: '))
+    if option == 1:
+        input_id = int(input('enter a number of id you want to add: '))
+        if search(input_id,list_product) == None:
+            input_name = input('enter newname of product: ')
+            update(input_id,list_product,input_name)
+            print('ADDED SUCCESSFUL')
+        else:
+            print('product contained list')
+    elif option == 2:
+        input_id = int(input('enter a number of id you want to change: '))
+        if search(input_id,list_product) == None:
+            print('product does not exist in this list')
+        else:
+            input_name = input('enter newname of product: ')
+            update(input_id,list_product,input_name)
+            print('UPDATE SUCCESSFUL')
+    elif option == 3: 
+        input_id = int(input('enter a number of id you want to delete: '))
+        if search(input_id,list_product) == None:
+            print('product does not exist in this list')
+        else:
+            del list_product[input_id]
+            print('DELETE SUCCESSFUL')
+    elif option == 4:
+        break
+    else:
+        print('your option invalid')
+print('list of product after updated: ',list_product)
