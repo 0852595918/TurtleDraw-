@@ -1,0 +1,18 @@
+list_emp = {'id':[1000,1001,1002,1003,1004,1005,1006],
+            'name':['pluto','thichuonghongtra','vua entry','f0rsaken','cat his','prozac her','No where to run'],
+            'class':['Controller','Controller','Duelist','Duelist','Sentinel','Sentinel','Initiator'],
+            'main':['Brimstone','Viper','Neon','Reyna','Chamber','Sage','Sova']}
+def emp_info(input_id):
+    temp = 0
+    for i in range(1000,int(list_emp['id'][-1])+1):
+        if input_id == int(list_emp['id'][i-1000]):
+            temp += 1
+            break
+    if temp == 1:
+        for key in list_emp:
+            print(key,':',list_emp[key][i-1000])        
+    else:
+        print('input id does not exist')
+
+input_variable = int(input('enter the id you want to find: '))
+emp_info(input_variable)
